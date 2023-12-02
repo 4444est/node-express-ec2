@@ -1,7 +1,27 @@
-import express from 'express'
+const express = require('express')
+const logger = require('morgan')
+const path = require('path')
+const server = express()
+server.use(express.urlencoded({'extended': true}))
+server.use(logger('dev'))
 
-const app = express()
+// Routes
+server.get('/do_a_random', (req, res) => {
+  res.send(`Your number is: ${Math.floor(Math.random() * 100) + 1}`)
+})
 
-app.listen(5001, () => console.log('Api running on port 5001'))
 
-app.get('/', (req, res) => res.json('My API running'))
+// Setup static page serving for all the pages in "public"
+const publicServedFilesPath = path.join(__dirname, 'public')
+server.use(express.static(publicServedFilesPath))
+
+
+// The server uses port 80 by default unless you start it with the extra
+// command line argument 'local' like this:
+//       node server.js local
+let port = 8080
+if (process.argv[2] === 'local') {
+  port = 8080
+}
+
+server.listen(port, () => console.log('Ready on localhost!'))
