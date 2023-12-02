@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+    <head>
+        <title>
+            Mad Lib
+        </title>
+    </head>
+    <body>
+        <main>
+            <p class="instructions">
+                Welcome to mad lib. Please enter the best matching
+                word!
+            </p>
+            <form action='/submit' method='post'>
+                <label for="noun">Noun:</label>
+                <input type="text" id="noun" name="noun" placeholder="Enter a noun" required>
+
+ 
+
+                <label for="adjective">Adjective:</label>
+                <input type="text" id="adjective" name="adjective" placeholder="Enter an adjective" required>
+
+                <label for="verb">Verb:</label>
+                <input type="text" id="verb" name="verb" placeholder="Enter a verb" required>
+
+                <label for="adjectiveTwo">Adjective:</label>
+                <input type="text" id="adjectiveTwo" name="adjectiveTwo" placeholder="Enter another adjective" required>
+
+                <label for="nounTwo">Noun:</label>
+                <input type="text" id="nounTwo" name="nounTwo" placeholder="Enter another noun" required>
+
+                <button id="submit">Submit</button>
+            </form>
+        </main>
+    </body>
+</html>

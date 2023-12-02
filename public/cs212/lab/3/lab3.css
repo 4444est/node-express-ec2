@@ -1,0 +1,27 @@
+@font-face {
+    font-family: "Summer";
+    src: url(/fonts/SummerLight-lrAX.otf) format('opentype');
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Summer";
+    src: url(/fonts/Summer-GpYG.otf);
+    font-weight: bold;
+}
+
+h1{
+    font-family: 'Press Start 2P', cursive;
+}
+
+.one {
+    font-family: 'Pixelify Sans', cursive;
+}
+.two {
+    font-family: 'Croissant One', cursive;
+}
+.three {
+    font-family: 'Tilt Prism', cursive;
+}
+/* font-family: 'Cookie', cursive;
+font-family: 'Croissant One', cursive;
+font-family: 'Fuggles', cursive; */
