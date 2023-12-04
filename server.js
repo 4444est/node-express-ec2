@@ -12,8 +12,8 @@ server.get('/submit', (req, res) => {
 
     // create madlib with nouns, verbs, and adjectives
     const madLibOne = `Hello, ${noun} your striking ${adjective} has led us to recruit you for ${verb}.`;
-    const madLibTwo = `${verb} is an exiting business that will allow you to ${adjectiveTwo} ${nounTwo}. It should be`;
-    const madLibThree = `great fun, and we look forward to hearing back from you`;
+    const madLibTwo = `${verb} is an exciting business that will allow you to ${adjectiveTwo} ${nounTwo}. It should be`;
+    const madLibThree = `great fun, and we look forward to hearing back from you!`;
     // link sections of madlib together
     const madLib = `${madLibOne}\n${madLibTwo}\n${madLibThree}`;
     
