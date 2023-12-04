@@ -6,9 +6,9 @@ server.use(express.urlencoded({'extended': true}))
 server.use(logger('dev'))
 
 // use get request to retrieve user data
-server.get('/submit', (req, res) => {
+server.post('/submit', (req, res) => {
     // save user input from request to variables
-    const { noun, verb, adjective, adjectiveTwo, nounTwo } = req.query;
+    const { noun, verb, adjective, adjectiveTwo, nounTwo } = req.body;
 
     // create madlib with nouns, verbs, and adjectives
     const madLibOne = `Hello, ${noun} your striking ${adjective} has led us to recruit you for ${verb}.`;
