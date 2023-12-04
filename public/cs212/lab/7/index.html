@@ -3,6 +3,7 @@
         <title>
             Mad Lib
         </title>
+        <script src="script.js" type="module"></script>
     </head>
     <body>
         <main>
@@ -10,7 +11,7 @@
                 Welcome to mad lib. Please enter the best matching
                 word!
             </p>
-            <form action='/submit' method='post'>
+            <form action='/submit' method='get'>
                 <label for="noun">Noun:</label>
                 <input type="text" id="noun" name="noun" placeholder="Enter a noun" required>
 
