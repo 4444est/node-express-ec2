@@ -11,7 +11,9 @@
                 Welcome to mad lib. Please enter the best matching
                 word!
             </p>
+            <!-- create form and let it use get method to retrieve user input and send them to /submit page -->
             <form action='/submit' method='get'>
+                <!-- connect a label to each input field -->
                 <label for="noun">Noun:</label>
                 <input type="text" id="noun" name="noun" placeholder="Enter a noun" required>
 
@@ -28,7 +30,7 @@
 
                 <label for="nounTwo">Noun:</label>
                 <input type="text" id="nounTwo" name="nounTwo" placeholder="Enter another noun" required>
-
+                <!-- create a submit button that will initiated get request -->
                 <button id="submit">Submit</button>
             </form>
         </main>

@@ -5,14 +5,19 @@ const server = express()
 server.use(express.urlencoded({'extended': true}))
 server.use(logger('dev'))
 
+// use get request to retrieve user data
 server.get('/submit', (req, res) => {
+    // save user input from request to variables
     const { noun, verb, adjective, adjectiveTwo, nounTwo } = req.query;
 
+    // create madlib with nouns, verbs, and adjectives
     const madLibOne = `Hello, ${noun} your striking ${adjective} has led us to recruit you for ${verb}.`;
     const madLibTwo = `${verb} is an exiting business that will allow you to ${adjectiveTwo} ${nounTwo}. It should be`;
     const madLibThree = `great fun, and we look forward to hearing back from you`;
+    // link sections of madlib together
     const madLib = `${madLibOne}\n${madLibTwo}\n${madLibThree}`;
     
+    // send user to new page at <website>/submit with succes statement and madlib
     res.send(`
       <h1>Submission Successful</h1>
       <p>${madLib}</p>
