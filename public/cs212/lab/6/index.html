@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hypotenuse Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<script type="module" src="index.js"></script>
+<body>
+    <div class="grid-container">
+        <header>
+            <h1>Hypotenuse Calculator</h1>
+        </header>
+        <nav>
+            <p>Catagories</p>
+            <li>Inverse Matrix Calculator</li>
+            <li>RREF Calculator</li>
+            <li>Gauss-Jordan Elimination Calculator</li>
+            <li>Transition Matrix Calculator</li>
+            <li>Area Calculator</li>
+            <li>Volume Calculator</li>
+            <li>Algebra Calculator</li>
+            <li>Determinant Calculator</li>
+            <li>Integral Calculator</li>
+            <li>Quadratic Formula Calculator</li>
+        </nav>
+        <article>
+            <img src="triangle.png" alt="pythagorean triangle">
+            <p>Please enter values for a and b to find the hypotenuse</p>
+            <input type="number" placeholder="Enter a" id="inputA">
+            <input type="number" placeholder="Enter b" id="inputB">
+            <button id="button">Calculate</button>
+            <p></p>
+            <div id="result">
+            </div>    
+        </article>
+        <aside>
+            <p><strong>Published: </strong></p>
+            <p>November 10, 2023</p>
+            <br>
+            
+            <div id="ad">
+                <h3><strong>AQKILO® Squirrel Finger Puppet Set, Animals Puppet Show Theater Props, Novelty Toys Weird Stuff Gifts</strong></h3>
+                <a href="https://www.amazon.com/Squirrel-Finger-Puppet-Toys-Set/dp/B08SBN1YJD/ref=sr_1_8?keywords=weird+stuff&qid=1699675983&sr=8-8"><img src="ad.png" alt="Finger puppet squirrel amazon ad"></a>
+            </div>
+        </aside>
+        <footer>
+            <h3 id="addendum"><strong>Addendum</strong></h3>
+            <p>For this lab I decided to create a website that can calculate the
+                hypotenuse of a triangle given the length of it's two other sides.
+                I found that the logic for the JavaScript function to be the easiest
+                part by far. Getting the holy grail setup took some time, but
+                the part of this lab that I struggled with the most was getting the 
+                button and user input to work correctly, and link up to everything else.
+                Having completed the assignment it seems extremely easy, but it took me 
+                good chunk of time to figure where everything was supposed to go, and 
+                the correct syntax to use. Since there are so many ways to do things
+                with JavaScript and HTML, I found myself moving from method to method thinking
+                that differenty syntax might solve the problem while the real issue was lurking
+                somewhere else in my code. The thing that allowed everything to come together
+                was the positioning of my input variables. I didn't realize that I needed to
+                put them within my click function for them update. Now that I understand how it
+                works it seems quite obvious, but I had assumed that they would update once a value was
+                passed into them.
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

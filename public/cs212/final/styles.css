@@ -1,0 +1,48 @@
+header {
+    display: flex;
+    margin: 30px;
+    justify-content: center;
+}
+h1 {
+    font-size: 8.2vh;t
+}
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(5, 100px);
+    grid-template-rows: repeat(5, 100px);
+}
+
+.parent > div {
+    margin: 5px;
+    border-radius: 10px;
+}
+
+#bottom {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    width: 235px;
+    height: 50px;
+    margin: 10px;
+    color: white;
+    background-color: black;
+    border: grey;
+    border-radius: 10px;
+}
+
+#addendum {
+    margin: 6em;
+    background: black;
+    color: white;
+    padding: 3em;
+    border-radius: 30px;
+
+}

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS212 Midterm Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<script type="module" src="index.js"></script>
+<body>
+    <div class="grid-container">
+        <header>
+            <h1>CS212 Midterm Game</h1>
+        </header>
+        <nav>
+
+        </nav>
+        <article class="grid-container2">
+            <p id="stage-text"></p>
+            <div class="flex-container grid-item">
+                <div class="flex-item"><img id="img1" src=""></div>
+                <div class="flex-item"><img id="img2" src=""></div>
+                <div class="flex-item"><img id="img3" src=""></div>
+            </div>
+            <div class="flex-container grid-item">
+                <div class="flex-item"><button id="btn-one"></button></div>
+                <div class="flex-item"><button id="btn-two"></button></div>
+                <div class="flex-item"><button id="btn-three"></button></div>
+            </div>
+            <p></p>
+            <div id="result">
+            </div>    
+        </article>
+        <aside>
+        </aside>
+        <footer>
+            <h3 id="addendum"><strong>Addendum</strong></h3>
+            <p>
+                I ran into a plethora of issues for this project. To begin, I was unsure how I should structure my website, and 
+                if I am supposed to use buttons to update the html. The main issue that I had for this was project was passing a variable
+                into a function to represent an object. I search for hours trying to find ways that I could get it to work. Eventually I 
+                decided to create a function that would translate the variable in the correct object and pass that object into the function.
+                I got that to work for the first object, but couldn't get it to work for the next object, since I couldn't find a good way
+                of returning the correct object variable to be used for the next button. In the end I wasn't able to finish this project even 
+                after putting a lot of time into it. What I should have done was take a minute to step back and reevaluate how I should approach
+                this problem because at this point in time, I now understand that I should have created one object with all of my stages
+                and stage specificationd within those. I didn't know that you could do this and it would have made my life much easier.
+                I can't change the past, so I hope to learn from this going forward.
+            </p>
+            <p id="addendum"><u>This is what I was working on, but couldn't integrate in time:</u></p>
+            <pre>
+                const stages = [
+  {
+    id: 1,
+    text: 'The afternoon sun beats down on your brow as waves reach up to touch your heels. You are stranded.',
+    options: [
+      {
+        text: 'Explore',
+        nextText: 2
+      },
+      {
+        text: 'Build a camp',
+        nextText: 3
+      },
+      {
+        text: 'Take a nap',
+        nextText: 4
+      }
+    ]
+  },
+  {
+    id: 2,
+    text: 'While scouting out the beach you come across what looks like a path.',
+    options: [
+      {
+        text: 'Take left path',
+        nextText: 5
+      },
+      {
+        text: 'Take right path',
+        nextText: 6
+      }
+    ]
+  },
+  {
+    id: 3,
+    text: 'You begin looking for sticks. You see a wooded grove to\
+            your left and sticks scattered across the beach ahead of you',
+    options: [
+      {
+        text: 'Enter wooded grove',
+        nextText: 7
+      },
+      {
+        text: 'Gather sticks ahead of you',
+        nextText: 8
+      }
+    ]
+  },
+  {
+    id: 4,
+    text: 'You wake up in a gaurded cell in a foreign village. The apes have captured you',
+    options: [
+      {
+        text: 'Try again',
+        nextText: -1,
+        image: "cell.png"
+      }
+    ]
+  },
+  {
+    id: 5,
+    text: 'You come across a ruin hidden behind dense foliage to your right',
+    options: [
+      {
+        text: 'Walk Towards Ruin',
+        nextText: 10
+      },
+      {
+        text: 'Continue Forward',
+        nextText: 11
+      }
+    ]
+  },
+  {
+    id: 6,
+    text: 'You come across a cabin, and decide to enter. A gentle ape answers the door\
+    and offers you shelter and a meal. You become close friends and live a quiet\
+    life with this fatherly ape',
+    options: [
+      {
+        text: 'Play again',
+        nextText: -1,
+        image: "cabinEnding.png"
+      }
+    ]
+  },
+  {
+    id: 7,
+    text: 'As you navigate through the ancient trees around you, a measured sound grabs your attention ahead',
+    options: [
+      {
+        text: 'Walk towards sound',
+        nextText: 10
+      },
+      {
+        text: 'Turn around and hurry back',
+        nextText: 15
+      }
+    ]
+  },
+  {
+    id: 8,
+    text: "While pondering the mysterious noise behind you, the rustle of branches from above\
+    snaps you out of your trance. Apes rain from the skies. You've been captured",
+    options: [
+      {
+        text: 'Start over',
+        nextText: -1,
+        image: "monkeyRain.png"
+      }
+    ]
+  },
+  {
+    id: 8,
+    text: 'After crossing a small rocky peninsula, you are amazed to see an oil tanker\
+    in the distance. You manage to signal it towards you once it gets closer\
+    and leave the island.',
+    options: [
+    {
+      text: 'Play Again',
+      nextText: -1,
+      image: "shipEnding.png"
+    }
+    ]
+},
+    
+  {
+    id: 10,
+    text: 'The sound becomes louder and louder, reverberating through your bones.\
+    You feel a sudden burst of hot air on your nape, and turn around to\
+    find the Ape King.',
+    options: [
+      {
+        text: 'Try Again',
+        nextText: -1,
+        image: "apeKing.png"
+      }
+    ]
+  },
+  {
+    id: 11,
+    text: 'You come across a cabin, and decide to enter. A gentle ape answers the door\
+    and offers you shelter and a meal. You become close friends and live a quiet\
+    life with this fatherly ape.',
+    options: [
+      {
+        text: 'Play again',
+        nextText: -1,
+        image: "cabinEnding.png"
+      }
+    ]
+  },
+  {
+    id: 12,
+    text: 'You come across a lively river flowing from a waterfall with a mysterious cave beneath it.',
+    options: [
+      {
+        text: 'Explore the mysterious cavern ahead',
+        nextText: -1
+      },
+      {
+        text: 'Travel down stream',
+        nextText: -1
+      }
+    ]
+  },
+  {
+    id: 13,
+    text: "You grow encounter a village ahead, and apprehensively run towards it. The apes don't like visitors",
+    options: [
+      {
+        text: 'Try again',
+        nextText: -1,
+        image: "village.png"
+      },
+    ]
+  },
+  {
+    id: 14,
+    text: "You begin to run back, and encounter a waterfall with a cavern beneath it",
+    options: [
+      {
+        text: 'Run into cavern',
+        nextText: 15
+      },
+      {
+        text: 'Continue back',
+        nextText: 16
+      }
+    ]
+  },
+  {
+    id: 15,
+    text: "Within the cavern a rhythmic beating pulls you toward an ornate amulet.\
+    You put it on your neck without a second thought and become overwhelmed\
+    with a wave of primal instinct. You've become the Ape King",
+    options: [
+      {
+        text: 'Play again',
+        nextText: -1,
+        image: "apeKingTransform.png"
+      }
+    ]
+  },
+  {
+    id: 16,
+    text: "You trip, and fall to the ground. A primal yell makes the ground shake.\
+            Before you know it, the ape king has reached you.",
+    options: [
+      {
+        text: 'Try again',
+        nextText: -1,
+        image: "apeKing.png"
+      }
+    ]
+  },
+]
+            </pre>
+        </footer>
+    </div>
+</body>
+</html>
